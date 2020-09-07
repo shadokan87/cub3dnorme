@@ -6,7 +6,7 @@
 /*   By: motoure <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 13:43:52 by motoure           #+#    #+#             */
-/*   Updated: 2020/09/07 18:28:51 by motoure          ###   ########.fr       */
+/*   Updated: 2020/09/07 18:40:42 by motoure          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,10 +129,10 @@ typedef struct	s_var
 }				t_var;
 
 int				ismap(char *str);
-int				is_token(char **token, char *str;
-void    		fill_color(t_var *var, int i);
-void    		get_res(t_var *var, int i);
-void    		check_color(t_var *var, char *str);
+int				is_token(char **token, char *str);
+void			fill_color(t_var *var, int i);
+void			get_res(t_var *var, int i);
+void			check_color(t_var *var, char *str);
 void			closegame(t_var *var, char *message);
 void			*ft_memset(void *b, int c, size_t len);
 int				rgb_int(int red, int green, int blue);
