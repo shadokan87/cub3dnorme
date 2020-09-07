@@ -6,7 +6,7 @@
 /*   By: motoure <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 13:42:29 by motoure           #+#    #+#             */
-/*   Updated: 2020/08/20 00:39:10 by motoure          ###   ########.fr       */
+/*   Updated: 2020/09/07 17:47:46 by motoure          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,17 +109,13 @@ void			writecolor(t_var *var, int extrabytes, int fd)
 	while (--y >= 0)
 	{
 		x = -1;
-		if (count == var->s_h / 2)
+		if (count > var->s_h / 2)
 			ft_putstr(1, "Generating BMP almost done, please wait.\n");
 		else if (count % 100 == 0)
 			ft_putstr(1, "Generating BMP please wait.\n");
 		while (++x <= var->s_w - 1)
-		{
-			//dst = var->addr + (y * var->line + x * (var->bpp / 8));
-			//color = *(unsigned int*)dst;
 			pixel_put_fd(var, *(unsigned int*)(var->addr + (y
 			* var->line + x * (var->bpp / 8))), fd);
-		}
 		if (extrabytes)
 		{
 			while (++i <= extrabytes)

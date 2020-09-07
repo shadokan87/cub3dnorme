@@ -6,7 +6,7 @@
 /*   By: motoure <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 13:39:10 by motoure           #+#    #+#             */
-/*   Updated: 2020/08/14 13:39:19 by motoure          ###   ########.fr       */
+/*   Updated: 2020/09/07 18:32:28 by motoure          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,32 +38,12 @@ void	dontrun(char *str)
 	exit(0);
 }
 
-/*
-static int ft_cmp(char *str1, char *str2)
-{
-	int i;
-
-	i = 0;
-	if (!str1 || !str2)
-		return (0);
-	if (ft_strlen(str1) != ft_strlen(str2))
-		return (0);
-	while (str1[i])
-	{
-		if (str1[i] != str2[i])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-*/
-
 void	check_arg(int argc, char **argv)
 {
-	char *str;
-	int map;
-	int fd;
-	
+	char	*str;
+	int		map;
+	int		fd;
+
 	map = (argc == 3) ? 2 : 1;
 	str = NULL;
 	if (!(argc >= 2 && argc <= 3))
@@ -80,7 +60,7 @@ void	check_arg(int argc, char **argv)
 int		main(int argc, char **argv)
 {
 	t_var var;
-	
+
 	check_arg(argc, argv);
 	init_struct(&var, argv);
 	if ((var.mlx_ptr = mlx_init()) == NULL)
