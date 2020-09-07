@@ -1,0 +1,33 @@
+void    *ft_memset(void *b, int c, size_t len)
+char *remove_extraspaces(char *str)
+    char *return_value;
+    int i;
+    int y;
+int     ft_tolower(int c)
+char *removes(char *str, t_var *var)
+void    getparamfile(int fd, char **line, t_var *var)
+    int ret;
+int  ft_strcmp(char *str, char *str2)
+    int i;
+void    fill_color(t_var *var, int i)
+void   fillloopparams(t_var *var)
+    int i;
+int *cpy(t_var *var, int *tab)
+void drawbmp (char *filename, t_var *var)
+int extrabytes;
+int paddedsize;
+int fd;
+int *init_to_fill(t_var *var)
+int getmapheight(char **str)
+void duplicate_map(t_var *var, char **str2)
+int checkbottom(char *str)
+int checktop(char *str)
+int issymbol(char c)
+void checkmiddle(char **str, t_var *var)
+void checkmap(char **str, t_var *var)
+char *rmspace(char *str)
+char *norestrict_remove_s(char *str)
+char **convspace(char **str)
+void getmapfromparamfile(t_var *var)
+    char *line;
+    int i;
